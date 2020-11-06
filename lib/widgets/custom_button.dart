@@ -24,7 +24,7 @@ class CustomButton extends StatelessWidget {
           textAlign: TextAlign.center,
           style: TextStyle(
             color: labelColour,
-            fontSize: 20,
+            fontSize: 20.0,
           ),
         ),
       ),
@@ -35,7 +35,7 @@ class CustomButton extends StatelessWidget {
           BoxShadow(
             blurRadius: 60.0,
             spreadRadius: 0.0,
-            offset: Offset(0, 16),
+            offset: Offset(0.0, 16.0),
             color: shadowColour,
           ),
         ],
@@ -66,7 +66,7 @@ class CustomSignInButton extends StatelessWidget {
       height: 58.0,
       child: Row(
         children: [
-          Padding(padding: EdgeInsets.symmetric(horizontal: 18)),
+          Padding(padding: EdgeInsets.symmetric(horizontal: 18.0)),
           logo,
           Padding(padding: EdgeInsets.symmetric(horizontal: 18.47)),
           Text(
@@ -74,7 +74,7 @@ class CustomSignInButton extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(
               color: labelColour,
-              fontSize: 20,
+              fontSize: 20.0,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -87,7 +87,7 @@ class CustomSignInButton extends StatelessWidget {
           BoxShadow(
             blurRadius: 60.0,
             spreadRadius: 0.0,
-            offset: Offset(0, 16),
+            offset: Offset(0.0, 16.0),
             color: shadowColour,
           ),
         ],
@@ -117,13 +117,13 @@ class CustomButton2 extends StatelessWidget {
       child: Center(
         child: Row(
           children: [
-            Padding(padding: EdgeInsets.symmetric(horizontal: 18)),
+            Padding(padding: EdgeInsets.symmetric(horizontal: 18.0)),
             Text(
               label,
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: labelColour,
-                fontSize: 20,
+                fontSize: 20.0,
               ),
             ),
           ],
@@ -136,7 +136,128 @@ class CustomButton2 extends StatelessWidget {
           BoxShadow(
             blurRadius: 60.0,
             spreadRadius: 0.0,
-            offset: Offset(0, 16),
+            offset: Offset(0.0, 16.0),
+            color: shadowColour,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class CustomChatBubbleTo extends StatelessWidget {
+  final Color shadowColour;
+  final List<Widget> children;
+  final double width;
+
+  const CustomChatBubbleTo({
+    Key key,
+    @required this.shadowColour,
+    this.children,
+    this.width,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 48.0,
+      width: width,
+      child: Center(
+        child: Row(children: children),
+      ),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.only(
+          topRight: Radius.circular(24.0),
+          bottomLeft: Radius.circular(24.0),
+          bottomRight: Radius.circular(24.0),
+        ),
+        border: Border.all(color: Colors.grey[200]),
+        boxShadow: [
+          BoxShadow(
+            blurRadius: 60.0,
+            spreadRadius: 0.0,
+            offset: Offset(0.0, 16.0),
+            color: shadowColour,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class CustomChatBubbleFrom extends StatelessWidget {
+  final Color labelColour;
+  final Color shadowColour;
+  final List<Widget> children;
+
+  const CustomChatBubbleFrom({
+    Key key,
+    this.labelColour,
+    @required this.shadowColour,
+    this.children,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 94.0,
+      child: Center(
+        child: Row(children: children),
+      ),
+      decoration: BoxDecoration(
+        color: Color(0xFF7041EE),
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(24.0),
+          bottomLeft: Radius.circular(24.0),
+          bottomRight: Radius.circular(24.0),
+        ),
+        border: Border.all(color: Colors.grey[200]),
+        boxShadow: [
+          BoxShadow(
+            blurRadius: 60.0,
+            spreadRadius: 0.0,
+            offset: Offset(0.0, 16.0),
+            color: shadowColour,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class ScheduleBubble extends StatelessWidget {
+  final Color shadowColour;
+  final List<Widget> children;
+  final double height;
+
+  const ScheduleBubble({
+    Key key,
+    @required this.shadowColour,
+    this.children,
+    this.height,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: height,
+      child: Center(
+        child: Row(children: children),
+      ),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.only(
+          topRight: Radius.circular(24.0),
+          bottomLeft: Radius.circular(24.0),
+          bottomRight: Radius.circular(24.0),
+        ),
+        border: Border.all(color: Colors.grey[200]),
+        boxShadow: [
+          BoxShadow(
+            blurRadius: 60.0,
+            spreadRadius: 0.0,
+            offset: Offset(0.0, 16.0),
             color: shadowColour,
           ),
         ],

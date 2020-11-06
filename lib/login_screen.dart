@@ -19,10 +19,10 @@ class _LoginScreenState extends State<LoginScreen> {
             children: [
               Center(
                 child: Padding(
-                  padding: const EdgeInsets.only(
-                      top: 95, right: 23.39, left: 24, bottom: 30),
+                  padding: EdgeInsets.only(
+                      top: 95.0, right: 23.39, left: 24.0, bottom: 30.0),
                   child: CircleAvatar(
-                    radius: 90,
+                    radius: 90.0,
                     backgroundImage: AssetImage('images/colorimage.png'),
                     backgroundColor: Colors.white,
                   ),
@@ -41,7 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontWeight: FontWeight.w400,
-                  fontSize: 20,
+                  fontSize: 20.0,
                 ),
               ),
             ],
@@ -51,7 +51,7 @@ class _LoginScreenState extends State<LoginScreen> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 35),
+                  padding: EdgeInsets.symmetric(horizontal: 35.0),
                   child: CustomButton(
                     label: 'Get Started',
                     labelColour: Colors.white,
@@ -60,7 +60,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 35, right: 35, top: 20),
+                  padding: EdgeInsets.only(left: 35.0, right: 35.0, top: 20.0),
                   child: CustomButton(
                     label: 'Login',
                     labelColour: Color(0xFF7041EE),
@@ -78,7 +78,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 Text(
                   'New around here?',
                   style: TextStyle(
-                    fontSize: 15,
+                    fontSize: 15.0,
                   ),
                 ),
                 GestureDetector(
@@ -94,7 +94,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ' Sign in',
                     style: TextStyle(
                       color: Color(0xFF7041EE),
-                      fontSize: 15,
+                      fontSize: 15.0,
                     ),
                   ),
                 ),
@@ -106,53 +106,3 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
-
-// purple button
-
-// Padding(
-// padding: const EdgeInsets.symmetric(horizontal: 35),
-// child: FlatButton(
-// color: Color(0xFF7041EE),
-// shape: RoundedRectangleBorder(
-// borderRadius: BorderRadius.all(
-// Radius.circular(24),
-// ),
-// ),
-// child: Padding(
-// padding: const EdgeInsets.all(15),
-// child: Text(
-// 'Get Started',
-// style: TextStyle(
-// color: Color(0xFFFFFFFF),
-// fontSize: 20,
-// ),
-// ),
-// ),
-// onPressed: () {},
-// ),
-// ),
-
-// white button
-
-// Padding(
-// padding: const EdgeInsets.only(left: 35, right: 35, top: 20),
-// child: FlatButton(
-// color: Color(0xFFFFFFFF),
-// shape: RoundedRectangleBorder(
-// borderRadius: BorderRadius.all(
-// Radius.circular(24),
-// ),
-// ),
-// child: Padding(
-// padding: const EdgeInsets.all(15),
-// child: Text(
-// 'Login',
-// style: TextStyle(
-// color: Color(0xFF7041EE),
-// fontSize: 20,
-// ),
-// ),
-// ),
-// onPressed: () {},
-// ),
-// ),
