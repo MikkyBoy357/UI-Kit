@@ -1,4 +1,5 @@
 # UI-Kit
+A Flutter UI Kit.
 
 ## ✨ Requirements
 * Any Operating System (ie. MacOS X, Linux, Windows)
@@ -12,3 +13,7 @@
 
 <img src="screenshots/login.png" width="400"/> <img src="screenshots/signin.png" width="400"/>
 <img src="screenshots/conversation.png" width="400"/>
+
+
+## 🤓 Author(s)
+**Michael Olusegun**
