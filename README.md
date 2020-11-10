@@ -13,7 +13,9 @@ A Flutter UI Kit.
 
 <img src="screenshots/login.png" width="300"/> <img src="screenshots/signin.png" width="300"/>
 <img src="screenshots/conversation.png" width="300"/> <img src="screenshots/event.png" width="300"/>
-<img src="screenshots/details" width="300"/>
+<img src="screenshots/details.png" width="300"/>
+
+## Star ⭐ the repo if you like what you see
 
 
 ## 🤓 Author(s)
