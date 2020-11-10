@@ -1,4 +1,4 @@
-package com.mikkyboy.travel_app
+package com.mikkyboy.ui_kit
 
 import io.flutter.embedding.android.FlutterActivity
 

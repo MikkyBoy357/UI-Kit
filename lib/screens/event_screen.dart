@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'details_screen.dart';
+
 class Event extends StatefulWidget {
   @override
   _EventState createState() => _EventState();
@@ -238,77 +240,87 @@ class _EventState extends State<Event> {
                       Padding(
                         padding: EdgeInsets.symmetric(vertical: 20),
                       ),
-                      Container(
-                        margin: EdgeInsets.only(right: 35),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Row(
-                              children: [
-                                PageNotch(
-                                  height: 83,
-                                  width: 3,
-                                  colour: Color(0xFFFA4F3B),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 20.0),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Row(
-                                        children: [
-                                          Text(
-                                            'Insights Analysis',
-                                            style: TextStyle(
-                                              color: Color(0xFFFA4F3B),
-                                              fontSize: 18,
-                                              fontWeight: FontWeight.w600,
-                                            ),
-                                          ),
-                                          Padding(
-                                              padding: EdgeInsets.symmetric(
-                                                  horizontal: 5.0)),
-                                          Text(
-                                            'Ihmad',
-                                            style: TextStyle(
-                                              color: Colors.grey[400],
-                                              fontSize: 18,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      Padding(
-                                        padding:
-                                            EdgeInsets.symmetric(vertical: 5.0),
-                                      ),
-                                      Text(
-                                        'How many users keep using',
-                                        style: TextStyle(
-                                          fontSize: 18,
-                                        ),
-                                      ),
-                                      Text(
-                                        'the “add now” feature on cal...',
-                                        style: TextStyle(
-                                          fontSize: 18,
-                                        ),
-                                      ),
-                                    ],
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Details(),
+                            ),
+                          );
+                        },
+                        child: Container(
+                          margin: EdgeInsets.only(right: 35),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Row(
+                                children: [
+                                  PageNotch(
+                                    height: 83,
+                                    width: 3,
+                                    colour: Color(0xFFFA4F3B),
                                   ),
-                                ),
-                              ],
-                            ),
-                            ParticipantImage(
-                              height: 34,
-                              width: 34,
-                              radius: 10.0,
-                              child: Icon(
-                                Icons.check,
-                                color: Color(0xFF7041EE),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 20.0),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Row(
+                                          children: [
+                                            Text(
+                                              'Insights Analysis',
+                                              style: TextStyle(
+                                                color: Color(0xFFFA4F3B),
+                                                fontSize: 18,
+                                                fontWeight: FontWeight.w600,
+                                              ),
+                                            ),
+                                            Padding(
+                                                padding: EdgeInsets.symmetric(
+                                                    horizontal: 5.0)),
+                                            Text(
+                                              'Ihmad',
+                                              style: TextStyle(
+                                                color: Colors.grey[400],
+                                                fontSize: 18,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.symmetric(
+                                              vertical: 5.0),
+                                        ),
+                                        Text(
+                                          'How many users keep using',
+                                          style: TextStyle(
+                                            fontSize: 18,
+                                          ),
+                                        ),
+                                        Text(
+                                          'the “add now” feature on cal...',
+                                          style: TextStyle(
+                                            fontSize: 18,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ),
-                          ],
+                              ParticipantImage(
+                                height: 34,
+                                width: 34,
+                                radius: 10.0,
+                                child: Icon(
+                                  Icons.check,
+                                  color: Color(0xFF7041EE),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                       Padding(
@@ -510,13 +522,16 @@ class PageNotch extends StatelessWidget {
     this.height,
     this.width,
     this.colour,
+    this.child,
   }) : super(key: key);
   final double height;
   final double width;
   final Color colour;
+  final Widget child;
   @override
   Widget build(BuildContext context) {
     return Container(
+      child: child,
       height: height,
       width: width,
       decoration: BoxDecoration(
