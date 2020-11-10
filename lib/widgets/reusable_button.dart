@@ -73,6 +73,7 @@ class MessageTextField extends StatelessWidget {
                   backgroundColor: Color(0xFF7041EE),
                   elevation: 0,
                   child: Icon(Icons.arrow_upward),
+                  onPressed: () {},
                 ),
               ),
             ],

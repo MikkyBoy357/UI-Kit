@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travel_app/sign_in_screen.dart';
+import 'package:travel_app/screens/sign_in_screen.dart';
 import 'package:travel_app/widgets/custom_button.dart';
 
 class LoginScreen extends StatefulWidget {

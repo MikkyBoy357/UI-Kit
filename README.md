@@ -12,7 +12,7 @@ A Flutter UI Kit.
 ## 📸 ScreenShots
 
 <img src="screenshots/login.png" width="400"/> <img src="screenshots/signin.png" width="400"/>
-<img src="screenshots/conversation.png" width="400"/>
+<img src="screenshots/conversation.png" width="400"/> <img src="screenshots/event.png" width="400"/>
 
 
 ## 🤓 Author(s)

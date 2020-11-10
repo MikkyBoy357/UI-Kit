@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_app/screens/event_screen.dart';
 import 'package:travel_app/widgets/custom_button.dart';
 import 'package:travel_app/widgets/reusable_button.dart';
 
@@ -117,51 +118,61 @@ class _ConversationScreenState extends State<ConversationScreen> {
                 Padding(
                   padding: EdgeInsets.symmetric(vertical: 5.0),
                 ),
-                ScheduleBubble(
-                  shadowColour: Color(0xff4E4F72).withOpacity(0.08),
-                  height: 102.0,
-                  children: [
-                    Padding(padding: EdgeInsets.symmetric(horizontal: 10.0)),
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Color(0xFF7041EE).withOpacity(0.1),
-                        borderRadius: BorderRadius.all(Radius.circular(24.0)),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Event(),
                       ),
-                      height: 70.0,
-                      width: 70.0,
-                      child: Padding(
-                        padding: const EdgeInsets.all(15.0),
-                        child: Image.asset(
-                          'images/message.png',
-                          height: 28.36,
-                          width: 37.82,
+                    );
+                  },
+                  child: ScheduleBubble(
+                    shadowColour: Color(0xff4E4F72).withOpacity(0.08),
+                    height: 102.0,
+                    children: [
+                      Padding(padding: EdgeInsets.symmetric(horizontal: 10.0)),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Color(0xFF7041EE).withOpacity(0.1),
+                          borderRadius: BorderRadius.all(Radius.circular(24.0)),
+                        ),
+                        height: 70.0,
+                        width: 70.0,
+                        child: Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: Image.asset(
+                            'images/message.png',
+                            height: 28.36,
+                            width: 37.82,
+                          ),
                         ),
                       ),
-                    ),
-                    Padding(padding: EdgeInsets.symmetric(horizontal: 10.0)),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 20),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Seattle PR Plan - L...',
-                            style: TextStyle(
-                              fontSize: 18,
+                      Padding(padding: EdgeInsets.symmetric(horizontal: 10.0)),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 20),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Seattle PR Plan - L...',
+                              style: TextStyle(
+                                fontSize: 18,
+                              ),
                             ),
-                          ),
-                          Text(
-                            'Sep 2nd at 2:05PM',
-                            style: TextStyle(
-                              color: Colors.grey[500],
-                              fontSize: 16,
+                            Text(
+                              'Sep 2nd at 2:05PM',
+                              style: TextStyle(
+                                color: Colors.grey[500],
+                                fontSize: 16,
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ],
             ),
