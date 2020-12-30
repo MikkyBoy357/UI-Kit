@@ -20,3 +20,6 @@ A Flutter UI Kit.
 
 ## 🤓 Author(s)
 **Michael Olusegun**
+
+
+<a href="https://www.buymeacoffee.com/mikkyboy357" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/arial-yellow.png" alt="Buy Me A Coffee" style="height: 30px !important;width: 109px !important;" ></a>
